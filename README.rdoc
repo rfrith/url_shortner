@@ -1,0 +1,10 @@
+== README
+
+Requirements
+
+Create a Rails web service that has the following behaviors:
+* Given a long URL, it will provide a short URL
+* Given a short URL that it generated, it will provide the corresponding long URL
+* O and 0 should be treated identically
+* No two short URLs should differ by only one character
+* Short URLs must not contain any string in a list of inappropriate words. The list should be stubbed as "foo" and "bar"
