@@ -156,4 +156,12 @@ RSpec.describe ShortUrlsController, type: :controller do
     end
   end
 
+  describe "GET #redirect" do
+    it "uses provided short url and redirects to its corresponding mapped long url" do
+      short_url = ShortUrl.create! valid_attributes
+      get :redirect, {:id => short_url.short.chars.last(5).join}, valid_session
+      expect(response).to redirect_to(short_url.long)
+    end
+  end
+
 end

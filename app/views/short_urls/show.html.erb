@@ -1,4 +1,4 @@
-<p><strong>Original URL:</strong> <%= @short_url.long %></p>
-<p><strong>Shortened URL:</strong> <%= @short_url.short %></p>
+<p><strong>Original URL:</strong> <%= link_to @short_url.long, @short_url.long, target: '_blank' %></p>
+<p><strong>Shortened URL:</strong> <%= link_to @short_url.short, @short_url.short, target: '_blank' %></p>
 
 <%= link_to 'Edit', edit_short_url_path(@short_url), class: "btn btn-default" %> <%= link_to 'Back', short_urls_path, class: "btn btn-default" %>

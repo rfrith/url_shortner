@@ -15,9 +15,8 @@
     <tbody>
     <% @short_urls.each do |short_url| %>
       <tr>
-        <td><%= short_url.long %></td>
-        <td><%= short_url.short %></td>
-
+        <td><%= link_to short_url.long, short_url.long, target: '_blank' %></td>
+        <td><%= link_to short_url.short, short_url.short, target: '_blank' %></td>
         <td>
           <% link_to short_url do %>
             <%= icon('eye') %>

@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'short_urls#index'
+  root 'short_urls#index'
+
+  get '/:id', to: 'short_urls#redirect'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
