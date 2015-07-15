@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a9541836-c4a6-4af1-a37c-87b8083f95a6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/frith_decisiv_assignment.iml" afterPath="$PROJECT_DIR$/.idea/frith_decisiv_assignment.iml" />
     </list>
     <ignored path="frith_decisiv_assignment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +58,8 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9321267">
-              <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.5248869">
+              <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -68,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/log/test.log">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7758" column="21" selection-start-line="7758" selection-start-column="21" selection-end-line="7758" selection-end-column="21" />
+              <caret line="8101" column="21" selection-start-line="8101" selection-start-column="21" selection-end-line="8101" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -800,7 +801,7 @@
     <entry file="file://$PROJECT_DIR$/log/test.log">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7758" column="21" selection-start-line="7758" selection-start-column="21" selection-end-line="7758" selection-end-column="21" />
+          <caret line="8101" column="21" selection-start-line="8101" selection-start-column="21" selection-end-line="8101" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -847,8 +848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9321267">
-          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.5248869">
+          <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
           <folding />
         </state>
       </provider>
