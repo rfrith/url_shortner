@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-url1 = "http://this.is.the.long/url/to/shorten"
-url2 = "http://this.is.the.long/url/tO/shOrten"
-url3 = "http://this.is.the.long/url/t0/sh0rten"
+url1 = "https://github.com/rfrith/url_shortner"
+url2 = "https://www.dropbox.com/s/57mh1wk07e89ggz/RyanFrithResume.pdf?dl=0"
+url3 = "https://www.dropbox.com/s/rmb4icf7u5rp52s/RyanFrithCV.pdf?dl=0"
 
 ShortUrl.create!(long: url1)
 ShortUrl.create!(long: url2)
