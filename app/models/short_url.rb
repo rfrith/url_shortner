@@ -13,7 +13,8 @@ class ShortUrl < ActiveRecord::Base
 
 
   def self.search(query)
-    where("long like ? or short like ?", "%#{query}%", "%#{query}%")
+    modified_query = query.gsub(/[0Oo]/, '%')  #use wild card to fulfill requirement (see Readme.rdoc)
+    where("long like ? or short like ?", "%#{modified_query}%", "%#{modified_query}%")
   end
 
 
@@ -25,12 +26,6 @@ class ShortUrl < ActiveRecord::Base
 
   def generate_unique_short_url(long)
     short = UrlShortener::generate_short_url(long)
-
-    #replace zero with 'O' and upcase 'o' to 'O' to  fulfill requirement (see Readme.rdoc)
-    key = short.chars.last(UrlShortener::UNIQUE_KEY_LENGTH).join
-    short.chomp!(key)
-    key.gsub!(/[0o]/, 'O')
-    short += key
 
     if(ShortUrl.where(short: short ).count > 0) #try again if already in database
       generate_unique_short_url(long)

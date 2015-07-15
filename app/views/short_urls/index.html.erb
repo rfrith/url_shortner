@@ -1,15 +1,18 @@
 <h1>Listing URLs</h1>
 
-<table class="table">
-  <thead>
+<% if @short_urls.empty? %>
+  No URLs found.<br><br>
+<% else %>
+  <table class="table">
+    <thead>
     <tr>
       <th colspan="1">Original URL</th>
       <th colspan="1">Shortened URL</th>
       <th colspan="1">Options</th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @short_urls.each do |short_url| %>
       <tr>
         <td><%= short_url.long %></td>
@@ -28,7 +31,8 @@
         </td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+<% end %>
 
 <%= link_to 'New Short URL', new_short_url_path, :class => "btn btn-default" %>
