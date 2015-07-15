@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>FrithDecisivAssignment</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--[if lt IE 9]>
+    <script src="http://html5.shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>URL Shortening App</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <%= link_to 'URL SHORTENING APP', short_urls_path, class: 'navbar-brand', data: { no_turbolink: true } %>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><%= link_to 'New Short URL', new_short_url_path %></li>
+              <li><%= link_to 'List All URLs', short_urls_path %></li>
+            </ul>
+            <%= form_tag(short_urls_path, :method => "get", id: "search-form", class: "navbar-form navbar-right", role: "search") do %>
+              <div class="form-group">
+                <%= text_field_tag :search, params[:search], placeholder: "Search For URL", size: "40", class: "form-control"  %>
+              </div>
+              <%= submit_tag "Search", class: "btn btn-default" %>
+            <% end %>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="main">
+      <% if(notice) %>
+        <div class="container-fluid">
+          <h4 id="notice" class="bg-success well-lg"><%= notice %></h4>
+        </div>
+      <% end %>
+      <div class="container-fluid">
+        <div>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand " style="color: #666666;"><%=Date.today.strftime("%Y")%> Ryan Frith</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

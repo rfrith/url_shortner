@@ -1,6 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p><strong>Original URL:</strong> <%= @short_url.long %></p>
+<p><strong>Shortened URL:</strong> <%= @short_url.short %></p>
 
-<p><%= @short_url.long %></p>
-<p><%= @short_url.short %></p>
-
-<%= link_to 'Back', short_urls_path %>
+<%= link_to 'Edit', edit_short_url_path(@short_url), class: "btn btn-default" %> <%= link_to 'Back', short_urls_path, class: "btn btn-default" %>

@@ -15,11 +15,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label "Enter the URL You Would Like To Shorten Here:" %><br>
-    <%= f.text_field :long, :size => "80" %>
+    <%= f.label "URL To Shorten" %>
+    <%= f.text_field :long, :size => "50" %>
   </div>
   <br>
   <div class="actions">
-    <%= f.submit "Create Short URL" %>
+    <%= f.submit "Save Short URL", class: "btn btn-default" %> <%= link_to "Cancel", short_urls_path, class: "btn btn-default" %>
   </div>
 <% end %>
