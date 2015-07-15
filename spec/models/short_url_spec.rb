@@ -44,4 +44,45 @@ RSpec.describe ShortUrl, type: :model do
     expect(short_url2.errors[:short]).not_to be_empty
   end
 
+  it "is searchable" do
+    url1 = "https://this.is.the.long/url/to/shorten1"
+    url2 = "https://this.is.the.long/url/to/shorten2"
+    url3 = "https://this.is.the.long/url/to/shorten3"
+
+    short1 = ShortUrl.create!(long: url1)
+    short2 = ShortUrl.create!(long: url2)
+    short3 = ShortUrl.create!(long: url3)
+
+    results = ShortUrl.search("https://this.is.the.long/url/to/shorten")
+    expect(results.size).to equal(3)
+
+    results = ShortUrl.search(url1)
+    expect(results.size).to equal(1)
+    expect(results[0].long).to eql(url1)
+
+    results = ShortUrl.search(short1.short)
+    expect(results.size).to equal(1)
+    expect(results[0].long).to eql(short1.long)
+  end
+
+  it "is agnostic to '0', 'O', and 'o' when searching" do
+    url1 = "https://this.is.the.long/url/to/shorten"
+    url2 = "https://this.is.the.long/url/tO/shOrten"
+    url3 = "https://this.is.the.long/url/t0/sh0rten"
+
+    short1 = ShortUrl.create!(long: url1)
+    short2 = ShortUrl.create!(long: url2)
+    short3 = ShortUrl.create!(long: url3)
+
+    search = "https://this.is.the.long/url/to/shorten"
+
+    results = ShortUrl.search(search)
+    expect(results.size).to equal(3)
+    expect(results[0].long).to eql(search)
+    expect(results[1].long).not_to eql(search)
+    expect(results[2].long).not_to eql(search)
+
+  end
+
+
 end
