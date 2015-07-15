@@ -47,3 +47,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
+
+group :production do
+  gem 'puma'
+  gem 'rails_12factor'
+  gem 'pg'
+end

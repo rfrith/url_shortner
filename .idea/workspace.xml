@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9541836-c4a6-4af1-a37c-87b8083f95a6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/short_urls/index.html.erb" afterPath="$PROJECT_DIR$/app/views/short_urls/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/short_urls_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/short_urls_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/short_urls_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/short_urls_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/short_urls/show.html.erb" afterPath="$PROJECT_DIR$/app/views/short_urls/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="frith_decisiv_assignment.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,11 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="short_urls_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="short_urls_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/short_urls_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11764706">
-              <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9321267">
+              <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -115,7 +120,6 @@
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/Gemfile.lock" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/views/short_urls/new.html.erb" />
@@ -135,6 +139,7 @@
         <option value="$PROJECT_DIR$/app/views/short_urls/show.html.erb" />
         <option value="$PROJECT_DIR$/spec/controllers/short_urls_controller_spec.rb" />
         <option value="$PROJECT_DIR$/app/controllers/short_urls_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -680,14 +685,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0">
@@ -842,8 +839,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/short_urls_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11764706">
-          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9321267">
+          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
           <folding />
         </state>
       </provider>
