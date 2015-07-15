@@ -21,7 +21,6 @@ RSpec.describe ShortUrl, type: :model do
     short_url = ShortUrl.new(long: nil)
     expect(short_url).not_to be_valid
     expect(short_url.errors[:long]).not_to be_empty
-    expect(short_url.errors[:short]).not_to be_empty
   end
 
   it "is valid without a short as long as a long is supplied" do
