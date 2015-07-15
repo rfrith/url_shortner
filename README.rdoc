@@ -1,10 +1,12 @@
-== README
+== url_shortner
 
-Requirements
+This is a simple Ruby web application using the Rails framework which allows you to take a long URL and create a shortened version.
+It  fulfills the following requirements:
 
-Create a Rails web service that has the following behaviors:
 * Given a long URL, it will provide a short URL
 * Given a short URL that it generated, it will provide the corresponding long URL
-* O and 0 should be treated identically
-* No two short URLs should differ by only one character
-* Short URLs must not contain any string in a list of inappropriate words. The list should be stubbed as "foo" and "bar"
+* To accommodate transcription ambiguities, O and 0 are treated identically
+* Short URLspace should be sparse, specifically having the property that no two short URLs should differ by only one character
+* Short URLs must not contain any string in a list of inappropriate words. The list should is initially stubbed as "foo" and "bar"
+
+{<img src="https://travis-ci.org/rfrith/url_shortner.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/rfrith/url_shortner]
