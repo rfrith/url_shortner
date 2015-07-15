@@ -37,7 +37,7 @@ gem 'font-awesome-sass'
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 

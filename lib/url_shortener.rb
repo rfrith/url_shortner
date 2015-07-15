@@ -1,6 +1,5 @@
 module UrlShortener
-
-  DOMAIN = 'localhost:3000'
+  DOMAIN = "#{Rails::Server.new.options[:Host]}:#{Rails::Server.new.options[:Port]}"
   HTTP = "http://"
   UNIQUE_KEY_LENGTH = 5
   KEY_CHARS = ('a'..'z').to_a + (0..9).to_a
