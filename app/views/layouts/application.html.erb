@@ -34,7 +34,7 @@
               <div class="form-group">
                 <%= text_field_tag :search, params[:search], placeholder: "Search For URL", size: "40", class: "form-control"  %>
               </div>
-              <%= submit_tag "Search", class: "btn btn-default" %>
+              <%= submit_tag "Search", class: "btn btn-default" %> <%= link_to 'Clear', short_urls_path, :class => "btn btn-default" %>
             <% end %>
           </div>
         </div>

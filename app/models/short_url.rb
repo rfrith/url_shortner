@@ -3,7 +3,7 @@ class ShortUrl < ActiveRecord::Base
   validates_presence_of :short, :if => :long?, :message => "An error occurred creating the shortened URL."
   validates_presence_of :long, :message => "You must supply a value for the original URL."
   validates_uniqueness_of :short, :long, :message => "This URL has already been shortened. Please enter a unique URL."
-  format_err = "Please enter a properly formatted URL"
+  format_err = "Please enter a properly formatted URL (e.g., http://www.google.com)"
   validates_format_of :short, :with => URI::regexp(%w(http https)), :if => :long?, :message => format_err
   validates_format_of :long, :with => URI::regexp(%w(http https)), :message => format_err
 

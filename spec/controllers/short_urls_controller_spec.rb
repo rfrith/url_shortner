@@ -24,11 +24,11 @@ RSpec.describe ShortUrlsController, type: :controller do
   # ShortUrl. As you add validations to ShortUrl, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {long: "http://www.another.long.url/to/shorten/"}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {long: "www.another.long.url/to/shorten/"}
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,14 +103,14 @@ RSpec.describe ShortUrlsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {long: "http://www.another.long.url/to/shorten/edited/"}
       }
 
       it "updates the requested short_url" do
         short_url = ShortUrl.create! valid_attributes
         put :update, {:id => short_url.to_param, :short_url => new_attributes}, valid_session
         short_url.reload
-        skip("Add assertions for updated state")
+        expect(short_url.long).to eql("http://www.another.long.url/to/shorten/edited/")
       end
 
       it "assigns the requested short_url as @short_url" do
